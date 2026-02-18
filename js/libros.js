@@ -32,6 +32,7 @@ function guardarLibro() {
 
     renderLecturaActual();
     renderizarUltimosDosMeses();
+    renderEstadisticas();
 }
 
 function eliminarLibro(index) {
@@ -41,6 +42,7 @@ function eliminarLibro(index) {
     
     renderLecturaActual();
     renderizarUltimosDosMeses();
+    renderEstadisticas();
 }
 
 function cargarLibroParaEditar(index) {
