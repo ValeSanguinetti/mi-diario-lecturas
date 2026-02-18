@@ -405,3 +405,60 @@ function crearTarjetaLibro(libro) {
 
     return div;
 }
+
+// ===================== FAVORITOS =====================
+function renderFavoritos() {
+    const contenedor = document.getElementById("favoritos"); 
+    const libros = obtenerLibros();
+
+    // Filtrar solo los favoritos
+    const favoritos = libros
+        .map((libro, index) => ({ ...libro, index }))
+        .filter((libro) => libro.favorito);
+
+    contenedor.innerHTML = ""; // limpiar antes de renderizar
+
+    if (!favoritos.length) {
+        contenedor.innerHTML = "<p>⭐ No hay libros favoritos aún</p>";
+        return;
+    }
+
+    // Crear grid de tarjetas
+    const grid = document.createElement("div");
+    grid.classList.add("lecturas-actuales-grid");
+
+    favoritos.forEach((libro) => {
+        const tarjeta = document.createElement("div");
+        tarjeta.classList.add("tarjeta-actual");
+        tarjeta.dataset.id = libro.id;
+        tarjeta.dataset.index = libro.index;
+
+        tarjeta.innerHTML = `
+            <div class="tarjeta-header">
+                <h3>📖 ${libro.titulo}</h3>
+                <div class="acciones">
+                    <button class="favorito-libro" data-id="${libro.id}">
+                        ${libro.favorito ? "⭐" : "☆"}
+                    </button>
+                    <button class="btn-editar" data-index="${libro.index}">✏️</button>
+                    <button class="btn-eliminar" data-index="${libro.index}">🗑️</button>
+                </div>
+            </div>
+            <p>✍️ ${libro.autor || "Autor desconocido"}</p>
+            <p>🏷️ ${libro.genero || "Sin género"}</p>
+            ${libro.inicio ? `<p>🗓 Desde ${libro.inicio}</p>` : ""}
+            ${libro.fin ? `<p>✔ Finalizado: ${libro.fin}</p>` : ""}
+            <p>💭 ${libro.notas || "Sin notas"}</p>
+        `;
+
+        tarjeta.addEventListener("click", (e) => {
+            if (e.target.closest(".acciones")) return;
+            abrirModalLibro(libro, libro.index);
+        });
+
+        grid.appendChild(tarjeta);
+    });
+
+    contenedor.innerHTML = `<h2>⭐ Favoritos (${favoritos.length})</h2>`;
+    contenedor.appendChild(grid);
+}

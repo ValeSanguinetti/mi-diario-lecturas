@@ -111,6 +111,7 @@ listaNotasLectura.addEventListener("click", (e) => {
 });
 
 document.getElementById("btnPendientes").addEventListener("click", renderPendientes);
+document.getElementById("btnFavoritos").addEventListener("click", renderFavoritos);
 
 document.getElementById("buscadorLibros").addEventListener("input", filtrarLibros);
 function filtrarLibros(e) {
