@@ -52,13 +52,14 @@ document.querySelectorAll(".editar-nota").forEach(btn => {
     const libro = libros[libroActivoIndex];
     const nota = libro.notasLectura[index];
 
-    nuevaNotaInput.value = nota.texto;   // 👉 carga texto en input
+    nuevaNotaInput.value = nota.texto;   
     nuevaNotaInput.focus();
 
-    notaEditandoIndex = index;           // 👉 estamos editando
+    notaEditandoIndex = index;           
     btnAgregarNota.textContent = "Guardar edición";
   });
 });
+
   modal.classList.remove("hidden");
 }
 

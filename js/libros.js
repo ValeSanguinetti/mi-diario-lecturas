@@ -2,18 +2,23 @@ function guardarLibro() {
     const libros = obtenerLibros();
 
     const libro = {
+        id: indiceEditando !== null ? libros[indiceEditando].id : Date.now(),
         titulo: tituloInput.value,
         autor: autorInput.value,
         genero: GeneroInput.value,
         inicio: fechaInicioInput.value,
         fin: fechaFinInput.value,
         notas: notasInput.value,
+         favorito: indiceEditando !== null
+    ? libros[indiceEditando].favorito || false
+    : false,
         notasLectura: indiceEditando !== null
             ? libros[indiceEditando].notasLectura || []
             : []   // 👈 nuevo libro inicia vacío
     };
 
     if (indiceEditando !== null) {
+         libro.id = libros[indiceEditando].id;
         libros[indiceEditando] = libro;
         indiceEditando = null;
     } else {
