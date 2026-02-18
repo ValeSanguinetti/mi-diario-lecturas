@@ -1,0 +1,70 @@
+/* =====================
+   FORMULARIO
+===================== */
+form {
+    background-color: var(--form-bg);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+#formLibro input,
+#formLibro textarea {
+    width: 100%;
+    padding: 10px 8px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    border: none;
+    border-bottom: 1px solid var(--input-border);
+    background: transparent;
+    outline: none;
+}
+
+#formLibro input:focus,
+#formLibro textarea:focus {
+    border-bottom-color:var(--input-border-focus);
+}
+
+#formLibro {
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#formLibro.activo {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+label {
+    font-size: 0.8rem;
+    color:var(--label-color);
+    margin-bottom: 6px;
+    display: block;
+}
+
+.fechas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0.6;
+    /*filter: var(--calendar-icon-filter);*/
+
+}
+
+#formLibro textarea {
+    min-height: 80px;
+    resize: none;
+    line-height: 1.5;
+}
+
+#btnGuardar {
+    margin-top: 12px;
+}

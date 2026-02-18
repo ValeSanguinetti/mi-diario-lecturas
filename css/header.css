@@ -1,0 +1,68 @@
+/* =====================
+   HEADER (portada)
+===================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Bloque izquierdo */
+.header-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.header-texto p {
+    color: var(--header-muted);
+}
+/* Bloque derecho */
+.header-acciones {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+}
+
+.header-botones{
+    flex-direction: row;
+}
+/* CONTENEDOR */
+.header-busqueda {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* INPUT BUSCADOR */
+#buscadorLibros {
+  flex: 1;
+  min-width: 220px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--borde-suave);
+  background-color: var(--card-bg);
+  color: var(--texto-principal);
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+/* Placeholder */
+#buscadorLibros::placeholder {
+  color: var(--texto-secundario);
+}
+
+/* Hover */
+#buscadorLibros:hover {
+  border-color: #b08cff;
+}
+
+/* Focus */
+#buscadorLibros:focus {
+  border-color: #8a5cff;
+  box-shadow: 0 0 0 2px rgba(138, 92, 255, 0.15);
+}

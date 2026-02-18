@@ -1,0 +1,55 @@
+/* =====================
+   ESTADÍSTICAS
+===================== */
+.estadisticas {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--stats-border);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: var(--stats-text);
+}
+
+.estadisticas span {
+    font-weight: bold;
+    color: var(--stats-highlight);
+}
+
+/* GRID */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+}
+
+/* TARJETA */
+.stat-card {
+    background: var(--stat-card-bg);
+    border-left: 6px solid var(--stat-card-border);
+    padding: 16px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+.stat-card span {
+    font-size: 1.4rem;
+}
+
+.stat-card p {
+    font-size: 0.8rem;
+    color: var(--stat-card-label);
+    margin: 6px 0;
+}
+
+.stat-card strong {
+    font-size: 1.4rem;
+    color: var(--stats-highlight);
+}

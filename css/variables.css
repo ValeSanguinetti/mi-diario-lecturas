@@ -1,0 +1,109 @@
+:root {
+  /* 🌞 modo claro */
+  --bg-body: #f3efe7;
+  --text-color: #333;
+    /* 🎨 Lectura actual */
+  --lectura-bg: #f3effc;
+  --lectura-border: #b8a6e4;
+  --text-muted: #777;
+
+
+  /* 🎛 selects */
+--select-bg: #ffffff;
+--select-border: #cfc3f3;
+--select-border-hover: #a88df0;
+--select-border-focus: #7b5ce6;
+--select-shadow-focus: rgba(123, 92, 230, 0.2);
+
+/* 📝 formulario */
+--form-bg: #faf8f3;
+--input-border: #cfc7b8;
+--input-border-focus: #b9a8e3;
+--label-color: #777;
+
+/* 📄 Cuaderno */
+  --cuaderno-bg: #fffdf8;
+  --cuaderno-grad-1: #ede9fe;
+  --cuaderno-grad-2: #faf7f2;
+  --cuaderno-border-accent: #7c3aed;
+  --cuaderno-shadow: rgba(0, 0, 0, 0.12);
+  --cuaderno-shadow-soft: rgba(0, 0, 0, 0.06);
+
+      /* 📚 Tarjetas de libros */
+  --libro-bg: #faf8f3;
+  --libro-border: #c6b7e2;
+  --libro-text: #333;
+  --libro-accion: #666;
+
+    /* 📊 Estadísticas */
+  --stats-border: #ddd;
+  --stats-text: #666;
+  --stats-highlight: #333;
+
+  --stat-card-bg: #f6f2ff;
+  --stat-card-border: #b8a6e4;
+  --stat-card-label: #777;
+  
+  /* 🔘 Botones */
+  --btn-bg: #c6b7e2;
+  --btn-bg-hover: #b2a2d6;
+  --btn-text: #333;
+
+  /*header*/
+   --header-muted: #777;
+}
+
+/* 🌙 modo oscuro — versión refinada */
+body.dark {
+  --bg-body: #18181c;        /* fondo general más profundo */
+  --text-color: #f5f5f7;
+
+  /* 🎨 Lectura actual */
+  --lectura-bg: #2c2540;     /* más contraste y profundidad */
+  --lectura-border: #8b7ae0; /* violeta suavizado */
+  --text-muted: #a6a3b8;
+
+  /* 🎛 selects */
+  --select-bg: #26262f;
+  --select-border: #6f63a8;
+  --select-border-hover: #8c7de0;
+  --select-border-focus: #a99cff;
+  --select-shadow-focus: rgba(169, 156, 255, 0.25);
+
+  /* 📝 formulario */
+  --form-bg: #2f2f38;
+  --input-border: #555562;
+  --input-border-focus: #9d8cff;
+  --label-color: #a1a1aa;
+
+  /* 📓 cuaderno */
+  --cuaderno-bg: #22222a;
+  --cuaderno-grad-1: #2b2640;
+  --cuaderno-grad-2: #1c1c22;
+  --cuaderno-border-accent: #8b7ae0;
+  --cuaderno-shadow: rgba(0, 0, 0, 0.65);
+  --cuaderno-shadow-soft: rgba(0, 0, 0, 0.35);
+
+  /* 📚 tarjetas de libros */
+  --libro-bg: #2e2e36;
+  --libro-border: #6f63a8;
+  --libro-text: #f5f5f7;
+  --libro-accion: #9ca3af;
+
+  /* 📊 estadísticas */
+  --stats-border: #3f3f46;
+  --stats-text: #a1a1aa;
+  --stats-highlight: #ffffff;
+
+  --stat-card-bg: #2a263a;
+  --stat-card-border: #7c6bb3;
+  --stat-card-label: #a1a1aa;
+
+  /* 🔘 botones */
+  --btn-bg: #7c6bb3;
+  --btn-bg-hover: #6a5aa3;
+  --btn-text: #ffffff;
+
+  /* header */
+  --header-muted: #a1a1aa;
+}

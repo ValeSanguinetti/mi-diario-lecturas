@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Mi Diario de Lecturas</title>
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+<div class="cuaderno">
+    <header>
+    <div class="header-texto">
+        <h1>Mi Diario de Lecturas</h1>
+        <h2>Lleva el control de tus lecturas y reflexiones</h2>
+    </div>
+
+    <div class="header-acciones">
+    <div class="header-botones">
+             <button id="toggleDark">🌙</button>
+        <button id="btnAgregarLibro">Añadir libro</button>
+   </div>
+
+        <div class="filtros">
+  <select id="filtroAnio">
+    <option value="">Año</option>
+  </select>
+
+  <select id="filtroMes" disabled>
+    <option value="">Mes</option>
+  </select>
+</div>
+    </div> 
+   
+</header>
+ <div class="header-busqueda">
+  <button id="btnPendientes">Listar pendientes</button>
+  <input type="text" id="buscadorLibros" placeholder="Buscar libros... (Titulo, Autor, Genero)" />
+</div>
+    <section class="contenido-principal">
+      <section id="pendientes"></section>
+
+<section id="lecturaActual"></section>
+
+        <div id="listaLecturas"></div>
+
+        <form id="formLibro">
+            <input id="titulo" type="text" placeholder="Título" />
+            <input id="autor" type="text" placeholder="Autor" />
+            <input id="genero" type="text" placeholder="Genero" />
+           <div class="fechas">
+  <div>
+    <label>Fecha inicio</label>
+    <input type="date" id="fechaInicio">
+  </div>
+  <div>
+    <label>Fecha fin</label>
+    <input type="date" id="fechaFin">
+  </div>
+</div>
+
+            <label>
+            Notas
+            <textarea id="notas" rows="2" placeholder="Ideas, citas, opiniones…"></textarea>
+            </label>
+
+            <button id="btnGuardar">Guardar</button>
+        </form>
+
+    </section>
+<div id="modalLibro" class="modal hidden">
+  <div class="modal-contenido">
+
+    <div class="modal-header">
+      <div>
+        <h2 id="modalTitulo"></h2>
+        <p><strong class="modal-subtitulo">Autor:</strong> <span id="modalAutor" class="modal-texto"></span></p>
+<p><strong class="modal-subtitulo">Género:</strong> <span id="modalGenero" class="modal-texto"></span></p>
+        <div id="modalFechas" class="modal-info"></div>
+      </div>
+      <button id="cerrarModal" class="cerrar-modal">✕</button>
+    </div>
+
+    <div class="modal-subtitulo">
+      <h3>Reflexión final</h3>
+      <p class="modal-texto" id="modalNotas"></p>
+    </div>
+
+    <div class="modal-subtitulo">
+      <h3>Notas durante la lectura</h3>
+      <ul id="listaNotasLectura" class="modal-texto"></ul>
+
+      <div class="nueva-nota">
+        <textarea id="nuevaNota" rows="2" placeholder="Agregar nota durante la lectura..."></textarea>
+        <button id="btnAgregarNota">Agregar</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+    <section class="estadisticas"></section>
+    
+<button id="btnScrollTop">
+  <i class="fa-solid fa-angles-up"></i>
+</button>
+
+</div>
+<script src="js/dom.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/fechas.js"></script>
+<script src="js/libros.js"></script>
+<script src="js/filtros.js"></script>
+<script src="js/estadisticas.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/render.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
