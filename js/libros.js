@@ -29,20 +29,20 @@ function guardarLibro() {
     formLibro.reset();
     formLibro.classList.remove("activo");
     document.getElementById("btnGuardar").textContent = "Guardar";
-
-    renderLecturaActual();
-    renderizarUltimosDosMeses();
     renderEstadisticas();
+ renderLecturaActual();
+    renderizarUltimosDosMeses();
+    
 }
 
 function eliminarLibro(index) {
     const libros = obtenerLibros();
     libros.splice(index, 1);
     guardarLibros(libros);
-    
-    renderLecturaActual();
-    renderizarUltimosDosMeses();
     renderEstadisticas();
+     renderLecturaActual();
+    renderizarUltimosDosMeses();
+    
 }
 
 function cargarLibroParaEditar(index) {
