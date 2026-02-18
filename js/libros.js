@@ -29,9 +29,12 @@ function guardarLibro() {
     formLibro.reset();
     formLibro.classList.remove("activo");
     document.getElementById("btnGuardar").textContent = "Guardar";
+   
+  cerrarModalForm();
     renderEstadisticas();
  renderLecturaActual();
     renderizarUltimosDosMeses();
+
     
 }
 
@@ -59,6 +62,8 @@ function cargarLibroParaEditar(index) {
     indiceEditando = index;
     document.getElementById("btnGuardar").textContent = "Actualizar";
     formLibro.classList.add("activo");
+
+    abrirModalForm();
 }
 
 function obtenerGruposTerminados() {

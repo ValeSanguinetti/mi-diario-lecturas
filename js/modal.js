@@ -107,3 +107,42 @@ btnAgregarNota.addEventListener("click", () => {
   nuevaNotaInput.value = "";
   abrirModalLibro(libro, libroActivoIndex); // refresca modal
 });
+
+// =====================
+// MODAL FORM LIBRO
+// =====================
+
+const modalForm = document.getElementById("modalForm");
+const btnAbrirForm = document.getElementById("btnAgregarLibro");
+const cerrarFormBtn = document.getElementById("cerrar");
+function abrirModalForm() {
+  // 🔥 limpiar estados anteriores
+  modalForm.classList.remove("hidden", "cerrando");
+
+  // 🔥 forzar reflow para reiniciar animación
+  void modalForm.offsetWidth;
+
+  modalForm.classList.remove("hidden");
+}
+function cerrarModalForm() {
+  modalForm.classList.add("cerrando");
+
+  setTimeout(() => {
+    modalForm.classList.remove("cerrando");
+    modalForm.classList.add("hidden");
+
+    // opcional: limpiar form
+    document.getElementById("formLibro").reset();
+  }, 250);
+}
+
+// abrir
+btnAbrirForm.addEventListener("click", abrirModalForm);
+
+// cerrar con X
+cerrarFormBtn.addEventListener("click", cerrarModalForm);
+
+// cerrar clic fuera
+window.addEventListener("click", (e) => {
+  if (e.target === modalForm) cerrarModalForm();
+});

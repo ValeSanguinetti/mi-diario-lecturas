@@ -46,30 +46,37 @@
 <section id="lecturaActual"></section>
 
         <div id="listaLecturas"></div>
+<!-- Modal -->
+<div id="modalForm" class="modal modalLibro hidden">
+  <div class="modal-content">
 
-        <form id="formLibro">
-            <input id="titulo" type="text" placeholder="Título" />
-            <input id="autor" type="text" placeholder="Autor" />
-            <input id="genero" type="text" placeholder="Genero" />
-           <div class="fechas">
-  <div>
-    <label>Fecha inicio</label>
-    <input type="date" id="fechaInicio">
-  </div>
-  <div>
-    <label>Fecha fin</label>
-    <input type="date" id="fechaFin">
+    <!-- FORM ORIGINAL -->
+    <form id="formLibro">
+      <span id="cerrar" class="cerrar-modal">&times;</span>
+      <input id="titulo" type="text" placeholder="Título" />
+      <input id="autor" type="text" placeholder="Autor" />
+      <input id="genero" type="text" placeholder="Genero" />
+
+      <div class="fechas">
+        <div>
+          <label>Fecha inicio</label>
+          <input type="date" id="fechaInicio">
+        </div>
+        <div>
+          <label>Fecha fin</label>
+          <input type="date" id="fechaFin">
+        </div>
+      </div>
+
+      <label>
+        Notas
+        <textarea id="notas" rows="2" placeholder="Ideas, citas, opiniones…"></textarea>
+      </label>
+
+      <button id="btnGuardar">Guardar</button>
+    </form>
   </div>
 </div>
-
-            <label>
-            Notas
-            <textarea id="notas" rows="2" placeholder="Ideas, citas, opiniones…"></textarea>
-            </label>
-
-            <button id="btnGuardar">Guardar</button>
-        </form>
-
     </section>
 <div id="modalLibro" class="modal hidden">
   <div class="modal-contenido">
